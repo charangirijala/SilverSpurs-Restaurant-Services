@@ -1,0 +1,18 @@
+#bgimg{
+    position: relative;
+    background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80');
+    height: 35rem;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+#txtoverlay{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#pricebox{
+    background: rgba(30, 255, 0, 0.644);
+    border-radius: 5px; 
+}
+

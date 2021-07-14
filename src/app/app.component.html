@@ -1,0 +1,88 @@
+<div *ngIf="loaderValue">
+  <mat-progress-bar mode="indeterminate" color="accent"></mat-progress-bar>
+</div>
+
+<section>
+  <!-- Nav bar common -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-none">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">Silver Spurs</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <i class="fas fa-bars fa-lg text-white"></i>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="ordernow" routerLinkActive="active">Order Now</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="menu" routerLinkActive="active">Menu</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="reservations" routerLinkActive="active">Reservations</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="aboutus" routerLinkActive="active">About us</a>
+          </li>
+          <li class="nav-item" *ngIf="!us.userLoginStatus">
+            <a class="nav-link" routerLink="register" routerLinkActive="active">Register</a>
+          </li>
+          <li class="nav-item" *ngIf="!us.userLoginStatus">
+            <a class="nav-link" routerLink="login" routerLinkActive="active">Login</a>
+          </li>
+
+          <li class="nav-item" *ngIf="us.userLoginStatus">
+            <a class="nav-link" routerLink="login" routerLinkActive="active" (click)=userLogout()>Logout</a>
+          </li>
+
+          <li class="nav-item" *ngIf="us.userLoginStatus">
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#cartmodal" type="button"><i
+                class="fas fa-shopping-cart"></i>${{cs.totalprice}}</a>
+          </li>
+          <li class="nav-item" *ngIf="us.userLoginStatus">
+            <a class="nav-link" id="userprofile" routerLink={{routerLink}} routerLinkActive="active">
+              <span><i class="far fa-user"></i></span> {{username}}</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <!-- Modal -->
+  <div class="modal fade" id="cartmodal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Your Cart</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div *ngFor="let item of cs.fooditems">
+            <div class="row">
+              <div class="col-10">
+                <h6>{{item.split(':')[0]}}</h6>
+              </div>
+              <div class="col-2">
+                <h6 class="fw-bold">${{item.split(':')[1]}}</h6>
+              </div>
+            </div>
+            <hr>
+          </div>
+          <h5 class="text-end fw-bold">Order Total:$ {{cs.totalprice}}</h5>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="onCheckout()">Checkout</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- rouer outlet -->
+  <router-outlet></router-outlet>
+
+</section>

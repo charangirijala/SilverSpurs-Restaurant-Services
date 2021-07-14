@@ -1,0 +1,65 @@
+<section>
+    <div class="bg">
+        <div class="profile">
+            <div class="row g-0">
+                <div class="col-sm-1"></div>
+                <div class="col-4 col-sm-2">
+                    <div class="profilepic float-end">
+                        <img src="{{profilepic}}" alt="" id="profileimg" class="img-fluid w-100 h-100">
+                    </div>
+                </div>
+                <div class="col-8 col-sm-9 p-1 align-self-center text-dark text-start">
+                    <h1>{{firstname}} {{lastname}}</h1>
+                    <h6>{{email}}</h6>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container prevorders pt-sm-5 pt-3">
+        <h3>Order History</h3>
+        <hr>
+        <div class="row">
+            <div class="order_items col-12 col-sm-6 col-md-4 ps-3 pe-3" *ngFor="let order of prev_orders">
+                <div class="order">
+                    <h4>Order Id:{{id}}</h4>
+                    <div *ngFor="let order_items of order.total_items">
+                        <p>{{order_items}}$</p>
+                    </div>
+                    <hr>
+                    <p class="text-end">Total Price:{{order.totalprice}}$</p>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <!-- <div *ngFor="let order of prev_orders">
+             <p>{{order.deliveryarea}}</p>
+            <p>{{order.email}}</p>
+            <p>{{order.name}}</p>
+            <p>{{order.phone}}</p>
+            <p>{{order.street}}</p>
+            <p>{{order.zipcode}}</p> 
+            <div *ngFor="let order_items of order.total_items">
+                <p>{{order_items}}$</p>
+            </div>
+            <hr>
+            
+            <br>
+        </div> -->
+        <div class="pt-sm-5 pt-3">
+            <h3>Previous Table Bookings</h3>
+            <hr>
+            <div class="row">
+                <div class="col-12 col-sm-6 col-md-4" *ngFor="let order of prev_tables">
+                    <h4>Table Booking Id:</h4>
+                    <p>Date of Booking: {{order.date_of_booking}}</p>
+                    <p>No.of people:{{order.no_of_people}}</p>
+                    <p>Phone number:{{order.phone_number}}</p>
+                    <p>Time:{{order.time_of_booking}}</p>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+    </div>
+</section>

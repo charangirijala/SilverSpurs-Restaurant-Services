@@ -1,0 +1,50 @@
+<h1 class="bg-info">Checkout</h1>
+<div class="row">
+    <div class="col-6">
+        <form class="p-3" #ref="ngForm" (ngSubmit)="placeOrder(ref.value)">
+            <h1>Basic Information</h1>
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" ngModel>
+            </div>
+            <div class="mb-3">
+                <label for="deliveryarea" class="form-label">Delivery Area</label>
+                <input type="text" class="form-control" id="deliveryarea" name="deliveryarea" ngModel>
+            </div>
+            <div class="mb-3">
+                <label for="zipcode" class="form-label">Zip Code</label>
+                <input type="number" class="form-control" id="zipcode" name="zipcode" ngModel>
+            </div>
+            <div class="mb-3">
+                <label for="street" class="form-label">Street  and number</label>
+                <input type="text" class="form-control" id="street" name="street" ngModel>
+            </div>
+            <div class="mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" name="phone" ngModel>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" name="email" ngModel>
+            </div>
+            <button type="submit" class="btn btn-primary">Place Order Now</button>
+        </form>
+    </div>
+    <div class="col-6">
+        <div>
+            <h4 class="bg-dark text-white">Your Order</h4>
+            <div *ngFor="let item of cs.fooditems">
+                <div class="row">
+                    <div class="col-10">
+                        <h6>{{item.split(':')[0]}}</h6>
+                    </div>
+                    <div class="col-2">
+                        <h6 class="fw-bold">${{item.split(':')[1]}}</h6>
+                    </div>
+                </div>
+                <hr>
+            </div>
+            <h5 class="text-end fw-bold">Order Total:$ {{cs.totalprice}}</h5>
+        </div>
+    </div>
+</div>

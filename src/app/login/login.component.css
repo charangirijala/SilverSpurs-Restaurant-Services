@@ -1,0 +1,60 @@
+.wrapper{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.footer{
+    
+}
+
+#form{
+    width: 50%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: rgb(48, 46, 45);
+    border-radius: 10px;
+}
+form{
+    padding:10px;
+}
+#loginbtn{
+    background-color: rgb(69, 173, 139);
+    font-weight: 800;
+    border:none;
+    padding-top:5px;
+    padding-bottom:5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+input{
+    background-color: black;
+    border-radius: 1rem;
+    border:1px solid black;
+    color:white;
+}
+
+input:focus{
+    background-color: black !important;
+}
+input:focus-visible{
+    background-color: black !important;
+    color: white;
+}
+input:focus-within{
+    background-color: black !important;
+    color: white;
+}
+
+#heading{
+    padding-top: 10px;
+}
+
+@media screen  and (max-width:576px){
+    #form{
+        width: 100%;
+    }
+}

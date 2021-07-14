@@ -1,0 +1,26 @@
+#imgbox {
+  background: url("http://images.unsplash.com/photo-1414235077428-338989a2e8c0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxMjA3fDB8MXxhbGx8fHx8fHx8fHwxNjIzMzc0MTg0&ixlib=rb-1.2.1&q=80&w=1080");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  height: 35rem;
+  position: relative;
+}
+#txtoverlay {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.booktable {
+  background-color: rgb(69, 173, 139);
+  border: none;
+  border-radius: 5px;
+  padding: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+input{
+    border:1px solid black;
+    padding: 10px;
+}
