@@ -9,8 +9,8 @@
 }
 
 .profilepic {
-  border: 8px solid white;
-  border-radius: 50%;
+  /* border: 8px solid white; */
+  /* border-radius: 50%; */
   height: 150px;
   width: 150px;
 }
@@ -23,7 +23,7 @@
   transform: translateY(280px);
 }
 #profileimg {
-  border-radius: 50%;
+  /* border-radius: 50%; */
 }
 
 @media screen and (max-width: 400px) {
@@ -31,7 +31,7 @@
     height: 300px;
   }
   .profilepic {
-    border: 8px solid white;
+    /* border: 8px solid white; */
     border-radius: 50%;
     height: 85px;
     width: 85px;
@@ -52,7 +52,7 @@
     height: 300px;
   }
   .profilepic {
-    border: 8px solid white;
+    /* border: 8px solid white; */
     border-radius: 50%;
     height: 100px;
     width: 100px;

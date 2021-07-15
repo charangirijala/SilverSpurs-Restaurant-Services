@@ -5,7 +5,7 @@
                 <div class="col-sm-1"></div>
                 <div class="col-4 col-sm-2">
                     <div class="profilepic float-end">
-                        <img src="{{profilepic}}" alt="" id="profileimg" class="img-fluid w-100 h-100">
+                        <img src="{{profilepic}}" alt="" id="profileimg" class="shadow img-thumbnail w-100 h-100">
                     </div>
                 </div>
                 <div class="col-8 col-sm-9 p-1 align-self-center text-dark text-start">
@@ -15,9 +15,10 @@
             </div>
         </div>
     </div>
-    <div class="container prevorders pt-sm-5 pt-3">
+    <div class="container prevorders pt-sm-5 pt-4">
         <h3>Order History</h3>
         <hr>
+        <p *ngIf="prev_orders_bool">No previous orders...</p>
         <div class="row">
             <div class="order_items col-12 col-sm-6 col-md-4 ps-3 pe-3" *ngFor="let order of prev_orders">
                 <div class="order">
@@ -48,6 +49,7 @@
         <div class="pt-sm-5 pt-3">
             <h3>Previous Table Bookings</h3>
             <hr>
+            <p *ngIf="prev_tables_bool" class="text-white">No previous bookings...</p>
             <div class="row">
                 <div class="col-12 col-sm-6 col-md-4" *ngFor="let order of prev_tables">
                     <h4>Table Booking Id:</h4>

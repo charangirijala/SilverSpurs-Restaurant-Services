@@ -10,6 +10,8 @@ import { UserConnectApiService } from '../user-connect-api.service';
 export class UsersComponent implements OnInit {
     prev_orders;
     prev_tables;
+    prev_orders_bool:boolean=true;
+    prev_tables_bool:boolean=true;
     id:number=Math.random()*12345;
     firstname=JSON.parse(localStorage.getItem('userObj')).firstname
     lastname=JSON.parse(localStorage.getItem('userObj')).lastname
@@ -21,7 +23,9 @@ export class UsersComponent implements OnInit {
     this.us.getorders(username).subscribe(
       res=>{
         this.prev_orders=res
-        console.log(this.prev_orders)
+        if(this.prev_orders[0]!=null){
+          this.prev_orders_bool=false;
+        }
       },
       err=>{
         console.log(`Error in getting the orders ${err.message}`)
@@ -30,7 +34,9 @@ export class UsersComponent implements OnInit {
     this.us.gettablebookings(username).subscribe(
       res=>{
         this.prev_tables=res;
-        console.log(this.prev_tables)
+        if(this.prev_tables[0]!=null){
+          this.prev_tables_bool=false;
+        }
       },
       err=>{
         console.log(`Error in getting the orders ${err.message}`)

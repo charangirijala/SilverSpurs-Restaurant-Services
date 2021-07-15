@@ -14,14 +14,15 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
   onLogin(credentialsObj){
-    console.log(credentialsObj)
+    //console.log(credentialsObj)
     this.us.loginUser(credentialsObj).subscribe(
       res=>{
         if(res.message==="Login Success"){
+          this.us.username$.next(res.username)
           localStorage.setItem("username",res.username)
           localStorage.setItem("token",res.token)
           localStorage.setItem("userObj",JSON.stringify(res.userObject))
-          console.log(res.userObject)
+          //console.log(res.userObject)
           this.us.userLoginStatus=true
           alert('Login success')
           this.router.navigateByUrl(`/users/${res.username}`)

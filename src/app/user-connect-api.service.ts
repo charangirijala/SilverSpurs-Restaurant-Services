@@ -1,12 +1,14 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserConnectApiService {
   userLoginStatus=false;
+  username$=new BehaviorSubject<string>("")
+  username=this.username$.asObservable()
   constructor(private hc:HttpClient) { }
 
   createUser(userObj):Observable<any>{

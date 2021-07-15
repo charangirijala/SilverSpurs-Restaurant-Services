@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap");
 .footer {
   position: absolute;
   width: 100%;
@@ -8,38 +8,50 @@
   color: tomato;
   text-align: center;
 }
-section{
+section {
   display: flex;
   flex-direction: column;
   position: relative;
 }
 
-#userprofile{
-  border:1px solid white;
+#userprofile {
+  border: 1px solid white;
   border-radius: 10px;
 }
 
 li a {
   font-weight: bold;
   padding-left: 3px;
-  color:white !important;
+  color: white !important;
 }
 
-.nav-link.active{
+#cart{
+  background-color: rgb(24, 23, 23);
+  border-radius: 0px;
+  border: none;
+}
+@media screen and (max-width: 996px) {
+  #cart {
+    /* background-color: black; */
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+}
+
+.nav-link.active {
   background-color: none;
-  border:2px solid yellow;
-  color:white !important;
+  border: 2px solid yellow;
+  color: white !important;
   font-weight: bold;
   border-radius: 5px;
 }
 
-.navbar-brand{
-  font-family: 'Pacifico', cursive;
-  font-size:x-large
+.navbar-brand {
+  font-family: "Pacifico", cursive;
+  font-size: x-large;
 }
 
-a{
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight:100 !important;
+a {
+  font-family: "Noto Sans KR", sans-serif;
+  font-weight: 100 !important;
 }
-

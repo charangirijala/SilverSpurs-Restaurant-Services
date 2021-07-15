@@ -13,37 +13,40 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <li class="nav-item">
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
             <a class="nav-link" routerLink="ordernow" routerLinkActive="active">Order Now</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
             <a class="nav-link" routerLink="menu" routerLinkActive="active">Menu</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
             <a class="nav-link" routerLink="reservations" routerLinkActive="active">Reservations</a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
             <a class="nav-link" routerLink="aboutus" routerLinkActive="active">About us</a>
           </li>
-          <li class="nav-item" *ngIf="!us.userLoginStatus">
+          <li class="nav-item" *ngIf="!us.userLoginStatus" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
             <a class="nav-link" routerLink="register" routerLinkActive="active">Register</a>
           </li>
-          <li class="nav-item" *ngIf="!us.userLoginStatus">
+          <li class="nav-item" *ngIf="!us.userLoginStatus" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
             <a class="nav-link" routerLink="login" routerLinkActive="active">Login</a>
           </li>
 
-          <li class="nav-item" *ngIf="us.userLoginStatus">
+          <li class="nav-item" *ngIf="us.userLoginStatus" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
             <a class="nav-link" routerLink="login" routerLinkActive="active" (click)=userLogout()>Logout</a>
           </li>
 
-          <li class="nav-item" *ngIf="us.userLoginStatus">
+          <li class="nav-item ps-1 pe-1" id="cart" *ngIf="us.userLoginStatus" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
             <a class="nav-link" data-bs-toggle="modal" data-bs-target="#cartmodal" type="button"><i
                 class="fas fa-shopping-cart"></i>${{cs.totalprice}}</a>
           </li>
-          <li class="nav-item" *ngIf="us.userLoginStatus">
+
+          <li class="nav-item" *ngIf="us.userLoginStatus" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">
             <a class="nav-link" id="userprofile" routerLink={{routerLink}} routerLinkActive="active">
-              <span><i class="far fa-user"></i></span> {{username}}</a>
+              <span><i class="far fa-user"></i></span> {{us.username | async}}</a>
           </li>
+
+          
         </ul>
       </div>
     </div>
@@ -54,7 +57,7 @@
   <!-- Modal -->
   <div class="modal fade" id="cartmodal" tabindex="-1">
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
+      <div class="modal-content bg-dark">
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Your Cart</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -75,7 +78,7 @@
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary" (click)="onCheckout()">Checkout</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="onCheckout()">Checkout</button>
         </div>
       </div>
     </div>

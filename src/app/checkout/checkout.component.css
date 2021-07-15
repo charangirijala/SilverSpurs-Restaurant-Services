@@ -1,0 +1,39 @@
+@media screen and (max-width:768px) {
+    .orderdetailsoutside{
+        display: none;
+    }
+    .orderdetailsinside{
+        display: block;
+    }
+}
+
+@media screen and (min-width:769px) {
+    .orderdetailsinside{
+        display: none;
+    }
+}
+
+
+#form {
+    background-color: rgb(48, 46, 45);
+    border-radius: 10px;
+  }
+  input {
+    background-color: black;
+    border-radius: 1rem;
+    border:none;
+    color:white;
+  }
+  
+  input:focus-within{
+      background-color: black;
+      color: white;
+  }
+  input:focus-visible{
+      background-color: black;
+      color: white;
+  }
+  input:focus{
+      background-color: black;
+      color: white;
+  }
