@@ -19,7 +19,17 @@ export class UsersComponent implements OnInit {
     profilepic=JSON.parse(localStorage.getItem('userObj')).profileImage
   constructor(private us:UserConnectApiService,private ar:ActivatedRoute) { }
   ngOnInit(): void {
-    let username=this.ar.snapshot.params.username
+    let username
+    this.us.username.subscribe(
+      data=>{
+        //console.log(data)
+        username=data
+      },
+      err=>{
+
+      }
+    )
+    //console.log(username)
     this.us.getorders(username).subscribe(
       res=>{
         this.prev_orders=res

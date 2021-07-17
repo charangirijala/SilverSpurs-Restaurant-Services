@@ -1,34 +1,44 @@
 .active {
-  background: #05386B;
+  background: #05386b;
   font-weight: bold;
   color: white;
-  padding:10px;
+  padding: 10px;
 }
-#menubtns{
+#menubtns {
   color: white;
   font-size: larger;
 }
 
-.cart{
+.cart {
   background-color: rgb(69, 173, 139);
   border: none;
   border-radius: 5px;
 }
-#addtocart{
+#addtocart {
   background-color: rgb(69, 173, 139) !important;
   border: none;
 }
 
-#plus{
+#plus {
   background-color: rgb(69, 173, 139) !important;
   border: none;
   border-top-left-radius: 5px;
   border-bottom-left-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
 }
 
-#minus{
+#minus {
   background-color: rgb(69, 173, 139) !important;
   border: none;
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.heading{
+  background-color: brown;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }

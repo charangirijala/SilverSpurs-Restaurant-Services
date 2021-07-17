@@ -1,50 +1,6 @@
-<!-- <div class="container-fluid">
-    <div class="row g-0">
-        <div class="col-4 col-sm-3 col-xl-2">
-            <div class=" shadow" id="menu_items">
-                <div *ngFor="let section of menu,let secnumber=index">
-                    <button class="btn w-100 text-start" [ngClass]="{'active':isClicked[secnumber]}" id="menubtns"
-                        (click)="displayMenu(secnumber)">{{section.section_name}}</button>
-                </div>
-            </div>
-        </div>
-        <div class="col-8 col-sm-9 col-xl-10">
-            <div class="shadow p-2" id="food_items_list">
-                <div *ngIf="menuDisplay" id="menusec">
-                    <div *ngFor="let items of menu[menuIndex].menu_items">
-                        <div class="row">
-                            <div class="col-9">
-                                <h5 class="fw-bold">{{items.name}}</h5>
-                                <h6 *ngIf="items.description.length==0">.....</h6>
-                                <h6 *ngIf="items.description.length!=0">{{items.description}}</h6>
-                            </div>
-                            <div class="col-3">
-                                <div *ngIf="!filterItems(items.name)" class="float-end">
-                                    <button class="d-inline" (click)="addToCart(items.price,items.name)" id="pricebox">$
-                                        {{converttoFloat(items.price)}}</button>
-
-                                </div>
-                                <div *ngIf="filterItems(items.name)" class="float-end">
-                                    <button (click)="addToCart(items.price,items.name)">+</button>
-                                    <button>{{countItem(items.name,items.price)}}</button>
-                                    <button (click)="deleteFromCart(items.price,items.name)">-</button>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                 <div *ngIf="!menuDisplay" class="">
-                    <img src="https://lh3.googleusercontent.com/proxy/4qpcA8fWUoBDWWRR-yIN2tKtwDHWwmsBr2Gk8KkuBz5nbQhardiH60k5PAMvZQCKJn9zcOXJIdB6I6tValYSSWd3I05XhuE"
-                        alt="" class="img-fluid mx-auto d-block">
-                    <h1 class="text-center">Please select any of the menu items</h1>
-                </div> 
-            </div>
-        </div>
-    </div>
-</div> -->
 
 <div>
+    <h1 class="heading ps-2">Our Menu</h1>
     <div id="menu_items">
         <div *ngFor="let section of menu,let secnumber=index">
             <button class="btn w-100 text-start" [ngClass]="{'active':isClicked[secnumber]}" id="menubtns"

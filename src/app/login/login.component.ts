@@ -18,6 +18,7 @@ export class LoginComponent implements OnInit {
     this.us.loginUser(credentialsObj).subscribe(
       res=>{
         if(res.message==="Login Success"){
+          console.log(res.username)
           this.us.username$.next(res.username)
           localStorage.setItem("username",res.username)
           localStorage.setItem("token",res.token)

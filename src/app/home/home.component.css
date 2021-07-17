@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap");
+
+#hello {
+  letter-spacing: 4px;
+}
+
+.sec1 {
+  width: 90%;
+  margin: auto;
+  border-radius: 10px;
+  box-shadow: rgba(255, 255, 255) 0px 5px 15px 0px;
+}
+
+.arc {
+  margin-top: 10px;
+  width: 100px;
+  height: 50px;
+  background-color: white;
+  margin: auto;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+#line {
+  width: 40px;
+  height: 4px;
+  border-radius: 2px;
+  background-color: yellow;
+  transition: ease-in;
+}
+
+.headings {
+  font-size: 80px;
+  font-weight: 900;
+  font-family: "Playfair Display", serif;
+}
+
+.heading {
+  font-weight: 900;
+  font-family: "Playfair Display", serif;
+}
+
+.carousel-item img {
+  /* height: 600px; */
+  width: 100%;
+}
+
+@media screen and (max-width: 698px) {
+  .headings {
+    font-size: 60px;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .headings {
+    font-size: 50px;
+  }
+
+  .carousel-item img {
+    height: 400px;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 490px) {
+  .headings {
+    font-size: 30px;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  .carousel-item img {
+    height: 300px;
+    width: 100%;
+  }
+
+  .arc {
+    width: 80px;
+    height: 40px;
+    background-color: white;
+    margin: auto;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
+}

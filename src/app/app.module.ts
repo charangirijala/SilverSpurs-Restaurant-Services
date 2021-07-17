@@ -37,7 +37,7 @@ import { InterceptorService } from './loader/interceptor.service';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatProgressBarModule
+    MatProgressBarModule,
   ],
   providers: [
     {provide:HTTP_INTERCEPTORS,useClass:InterceptorService,multi:true}
