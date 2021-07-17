@@ -9,7 +9,10 @@
 #txtoverlay{
     position: absolute;
     top: 50%;
+    left: 50%;
     transform: translateY(-50%);
+    transform: translateX(-50%);
+    width: 100%;
 }
 #pricebox{
     background: rgba(30, 255, 0, 0.644);

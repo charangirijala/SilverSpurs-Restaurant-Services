@@ -1,31 +1,39 @@
 <div id="imgbox" class="text-white text-center">
     <div id="txtoverlay">
-        <h1 class="fw-bolder">RESERVATIONS</h1>
+        <h1 class=" heading">RESERVATIONS</h1>
         <h3>We accept a limited number of reservations up to one month in advance for parties of up to ten guests.
         </h3>
     </div>
 </div>
-<div class="bg-white">
-    <div class="container pt-3">
+<div class="arc"></div>
+<div class="sec1 rounded">
+    <div class=" ">
         <div class="row">
             <div class="col-12 col-sm-6">
-                <img src="https://thumbs.dreamstime.com/b/beautiful-chinese-restaurant-table-setting-china-porcelain-133544422.jpg"
-                    alt="" class="img-responsive w-100 h-100 rounded-3">
+                <div class="p-3">
+                    <img src="https://thumbs.dreamstime.com/b/beautiful-chinese-restaurant-table-setting-china-porcelain-133544422.jpg"
+                        alt="" class="img-responsive w-100 rounded-3">
+                </div>
             </div>
-            <div class="col-12 col-sm-6">
-                <h1 class="text-dark">Book A Table</h1>
-                <p class="text-dark lead">Making a reservation at Délicious restaurant is easy and takes just a couple
-                    of minutes.
-                </p>
-                <form (ngSubmit)="onTableBook(ref.value)" #ref="ngForm">
-                    <input type="number" class="mb-3 w-100" placeholder="Number of Guests" ngModel name="no_of_people">
-                    <input type="date" class="mb-3 w-50" ngModel name="date_of_booking">
-                    <input type="time" class="mb-3 w-50" ngModel name="time_of_booking">
-                    <input type="tel" placeholder="Enter phone number" class="mb-3 w-100" ngModel name="phone_number">
-                    <div class="text-end">
-                        <button type="submit" class=" booktable">Book a table</button>
-                    </div>
-                </form>
+            <div class="col-12 col-sm-6 align-self-center" >
+                <div class="p-3">
+                    <h1 class="heading text-dark">Book A Table</h1>
+                    <p class="text-dark lead">Making a reservation at Délicious restaurant is easy and takes just a
+                        couple
+                        of minutes.
+                    </p>
+                    <form (ngSubmit)="onTableBook(ref.value)" #ref="ngForm">
+                        <input type="number" class="mb-3 w-100" placeholder="Number of Guests" ngModel
+                            name="no_of_people">
+                        <input type="date" class="mb-3 w-50" ngModel name="date_of_booking">
+                        <input type="time" class="mb-3 w-50" ngModel name="time_of_booking">
+                        <input type="tel" placeholder="Enter phone number" class="mb-3 w-100" ngModel
+                            name="phone_number">
+                        <div class="text-end">
+                            <button type="submit" class=" booktable">Book a table</button>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

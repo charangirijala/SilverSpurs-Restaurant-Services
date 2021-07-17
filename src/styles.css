@@ -1,3 +1,6 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap");
+
 /* You can add global styles to this file, and also import other style files */
 body {
   outline: none !important;
@@ -5,6 +8,12 @@ body {
   appearance: none;
   background-color: rgb(24, 23, 23);
   color: white !important;
+}
+
+
+.heading {
+  font-weight: 900;
+  font-family: "Playfair Display", serif;
 }
 
 .buttoncommon {

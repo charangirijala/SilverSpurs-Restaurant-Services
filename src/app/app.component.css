@@ -8,6 +8,10 @@
   color: tomato;
   text-align: center;
 }
+
+nav{
+  background-color: black;
+}
 section {
   display: flex;
   flex-direction: column;

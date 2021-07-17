@@ -9,14 +9,14 @@
                     </div>
                 </div>
                 <div class="col-8 col-sm-9 p-1 align-self-center text-dark text-start">
-                    <h1>{{firstname}} {{lastname}}</h1>
+                    <h1 class="heading">{{firstname}} {{lastname}}</h1>
                     <h6>{{email}}</h6>
                 </div>
             </div>
         </div>
     </div>
     <div class="container prevorders pt-sm-5 pt-4">
-        <h3>Order History</h3>
+        <h3 class="heading">Order History</h3>
         <hr>
         <p *ngIf="prev_orders_bool">No previous orders...</p>
         <div class="row">
@@ -47,7 +47,7 @@
             <br>
         </div> -->
         <div class="pt-sm-5 pt-3">
-            <h3>Previous Table Bookings</h3>
+            <h3 class="heading">Previous Table Bookings</h3>
             <hr>
             <p *ngIf="prev_tables_bool" class="text-white">No previous bookings...</p>
             <div class="row">
