@@ -3,10 +3,11 @@
         <div class="profile">
             <div class="row g-0">
                 <div class="col-sm-1"></div>
-                <div class="col-4 col-sm-2">
-                    <div class="profilepic float-end">
+                <div class="col-4 col-sm-2" style="height:150px; width: 150px;">
+                    <div class="pp w-100 h-100 img-thumbnail" style="height: 600px; background: url('{{profilepic}}'); background-position: center center; background-repeat: no-repeat; background-size: cover;" ></div>
+                    <!-- <div class="profilepic float-end img-thumbnail shadow w-100 h-100" style="background: url('{{profilepic}}'); background-color: wheat; background-position: center center; background-size: cover;">
                         <img src="{{profilepic}}" alt="" id="profileimg" class="shadow img-thumbnail w-100 h-100">
-                    </div>
+                    </div> -->
                 </div>
                 <div class="col-8 col-sm-9 p-1 align-self-center text-dark text-start">
                     <h1 class="heading">{{firstname}} {{lastname}}</h1>
@@ -22,7 +23,7 @@
         <div class="row">
             <div class="order_items col-12 col-sm-6 col-md-4 ps-3 pe-3" *ngFor="let order of prev_orders">
                 <div class="order">
-                    <h4>Order Id:{{id}}</h4>
+                    <h4 class="pt-2">Order Id :  {{getid()}}</h4>
                     <div *ngFor="let order_items of order.total_items">
                         <p>{{order_items}}$</p>
                     </div>
@@ -50,9 +51,9 @@
             <h3 class="heading">Previous Table Bookings</h3>
             <hr>
             <p *ngIf="prev_tables_bool" class="text-white">No previous bookings...</p>
-            <div class="row">
-                <div class="col-12 col-sm-6 col-md-4" *ngFor="let order of prev_tables">
-                    <h4>Table Booking Id:</h4>
+            <div class="row pb-2">
+                <div class="order_items col-12 col-sm-6 col-md-4" *ngFor="let order of prev_tables">
+                    <h4 class="pt-2">Table Booking Id: {{getid()}}</h4>
                     <p>Date of Booking: {{order.date_of_booking}}</p>
                     <p>No.of people:{{order.no_of_people}}</p>
                     <p>Phone number:{{order.phone_number}}</p>

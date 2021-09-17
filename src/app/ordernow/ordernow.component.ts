@@ -21,6 +21,7 @@ export class OrdernowComponent {
     this.mc.getMenu().subscribe(
       data => {
         this.menu = data.MenuObj[0].result.menus[0].menu_sections
+        console.log(data)
       },
       err => {
         console.log("Error in connection with menu api err:", err)

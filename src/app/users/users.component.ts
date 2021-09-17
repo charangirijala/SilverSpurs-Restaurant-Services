@@ -12,7 +12,7 @@ export class UsersComponent implements OnInit {
     prev_tables;
     prev_orders_bool:boolean=true;
     prev_tables_bool:boolean=true;
-    id:number=Math.random()*12345;
+    id:number;
     firstname=JSON.parse(localStorage.getItem('userObj')).firstname
     lastname=JSON.parse(localStorage.getItem('userObj')).lastname
     email=JSON.parse(localStorage.getItem('userObj')).email
@@ -52,5 +52,12 @@ export class UsersComponent implements OnInit {
         console.log(`Error in getting the orders ${err.message}`)
       }
     )
+
+    
+  }
+
+  getid(){
+    let id=Math.floor(Math.random()*100000000000);
+    return id;
   }
 }

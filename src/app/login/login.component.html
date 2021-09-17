@@ -1,19 +1,22 @@
 <div class="wrapper">
   <div class="container" id="form">
     <div *ngIf="!us.userLoginStatus">
-      <h1  class="heading text-center">Login</h1>
+      <h1  class="heading text-center pt-3">Login</h1>
       <form (ngSubmit)="onLogin(ref.value)" #ref="ngForm">
         <div class="form-floating mb-5 mt-3">
           <input autocomplete="off" type="text" class="form-control" id="username" name="username"
             placeholder="username" ngModel>
           <label for="username">Username</label>
         </div>
-        <div class="form-floating mb-5">
+        <div class="form-floating mb-1">
           <input type="password" class="form-control" id="password" name="password" placeholder="password" ngModel>
           <label for="password">Password</label>
         </div>
         <div class="text-end">
-          <button type="submit" id="loginbtn" class="btn btn-info">Login</button>
+          <button class="btn text-white" type="button" (click)="forgotpass()">forgot password? Click here</button>
+        </div>
+        <div class="text-end mt-2">
+          <button type="submit" id="loginbtn"  class="btn btn-info">Login</button>
         </div>
       </form>
     </div>
